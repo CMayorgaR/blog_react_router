@@ -1,12 +1,26 @@
+import { useState, useEffect } from "react";
+import Card from "./Card";
+
+
+const API_URL = "https://rickandmortyapi.com/api"
+
 const Cards = () => {
-    return (
-       <><div className="card" style={{"width": "18rem"}}>
-       <img src="..." className="card-img-top" alt="..."/>
-       <div className="card-body">
-         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-       </div>
-     </div></>
-    )
+
+  const [personaje, setPersonaje] = useState([]);
+
+  useEffect(() => {
+    fetch(API_URL + "/character")
+      .then(res => res.json())
+      .then(data => setPersonaje(data.results))
+  }, []);
+  return (
+    <>
+    <h1 className="text-primary">Personajes</h1>
+    <div className= "d-flex justify-content-between">
+      {personaje.map(personaje => <Card src={personaje.image} alt={personaje.name} key={personaje.id} />)}
+    </div>
+    </>
+  )
 };
 
 export default Cards;
