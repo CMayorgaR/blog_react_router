@@ -4,7 +4,9 @@ const Footer = () => {
         className = "bg-dark text-center"
         style={{
             height: "5hv",
-            color: "white"
+            color: "white",
+            bottom: "0px"
+            
         }}>
         Copyright CMayorga-4GA PT 25
         </div>

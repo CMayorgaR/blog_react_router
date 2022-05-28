@@ -16,7 +16,7 @@ const Cards = () => {
   return (
     <>
     <h1 className="text-primary">Personajes</h1>
-    <div className= "d-flex justify-content-between">
+    <div className= "d-inline-flex p-2">
       {personaje.map(personaje => <Card src={personaje.image} alt={personaje.name} key={personaje.id} />)}
     </div>
     </>

@@ -7,11 +7,11 @@ import Footer from './views/Footer';
 
 
 const App = () => {
-  return <>
+  return <div className="fondo">
     <Navbar />
     <Cards />
     <Footer />
-  </>
+  </div>
 }
 
 
