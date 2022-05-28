@@ -1,9 +1,9 @@
 import './App.css';
 //import { render } from "react-dom";
 //import { BrowserRouter, Routes, Route,} from "react-router-dom";
-import Navbar from './views/Navbar';
-import Cards from './views/Cards';
-import Footer from './views/Footer';
+import Navbar from './components/Navbar';
+import Cards from './components/Cards';
+import Footer from './components/Footer';
 
 
 const App = () => {

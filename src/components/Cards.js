@@ -16,8 +16,15 @@ const Cards = () => {
   return (
     <>
     <h1 className="text-primary">Personajes</h1>
-    <div className= "d-inline-flex p-2">
-      {personaje.map(personaje => <Card src={personaje.image} alt={personaje.name} key={personaje.id} />)}
+    <div className= "row row-cols-1 row-cols-md-3 g-4">
+      {personaje.map(personaje => <Card 
+      src={personaje.image} 
+      alt={personaje.name} 
+      key={personaje.id} 
+      name={personaje.name} 
+      gender={personaje.gender}
+      status= {personaje.status}
+      specie= {personaje.species} />)}
     </div>
     </>
   )
