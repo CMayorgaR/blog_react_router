@@ -1,25 +1,63 @@
-const Navbar = () => {
-    return (
-        <nav className="navbar container-fluid bg-dark d-flex justify-content-between">
-            <div className="flex-row">
-                <a className="navbar-brand" href="#">
-                    <img src="https://play-lh.googleusercontent.com/fXQVXTma1ENwAFjsxJ4IT6GntBr3RxWP3HMSLbNdvycl-0tscOQEeJIEAmehcNOt5hCp" alt="" width="30px" height="30px" className="d-inline-block align-text-top image-fluid" />
-                    El Blog de...
-                </a>
-            </div>
-            <span className="flex-row">
-                <div className="dropdown">
-                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Favoritos
-                    </button>
-                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                        <li>Holi</li>
-                    </ul>
-                </div>
-            </span>
-        </nav>
-    )
-}
+import { Link } from "react-router-dom";
 
+const Navbar = () => {
+  return (
+    <nav className="container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+      <span>
+          <Link to="/home" className="navbar-brand"> <img
+            src="https://nerdmacia.cl/wp-content/uploads/2017/06/Rick_and_Morty_Logo_and_Image.png"
+            alt=""
+            style={{ width: "400px", height: "150px" }}
+          />
+        </Link>
+      </span>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/characters" className="nav-link active">
+                Personajes
+              </Link>
+            </li>
+            <li className="nav-item">
+            <Link to="/lugares" className="nav-link">
+                Lugares
+              </Link>
+            </li>
+            <li className="nav-item">
+            <Link to="/episodios" className="nav-link">
+                Episodios
+              </Link>
+            </li>
+            <div className="justify-content-end">
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Favoritos
+                </a>
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;
