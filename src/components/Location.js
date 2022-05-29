@@ -1,12 +1,13 @@
 const Location = (props) => {
-    return
-    <div className="card border-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body text-primary">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+  return (
+    <div className="card text-bg-dark mb-3" style={{ maxWidth: "18rem" }}>
+      <div className="card-header">{props.type}</div>
+      <div className="card-body">
+        <h5 className="card-title">{props.name}</h5>
+        <p className="card-text">{props.dimension}</p>
+      </div>
     </div>
-}
+  );
+};
 
 export default Location;
