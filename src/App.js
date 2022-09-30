@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import injectContext from "./store/appContext";
 import Home from "./views/Home";
 import Characters from "./views/Characters";
 import Lugares from "./views/Lugares";
@@ -24,7 +25,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default injectContext(App);
 
 //Creamos el componente principal que es donde van a confluir todas las rutas (en este caso App).
 //es un componente de RRD que nos permite crear la lógica de enrutamiento de c/u de nuestras vistas. Elemento Padre.

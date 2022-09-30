@@ -1,6 +1,12 @@
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Context } from '../store/appContext';
+import { useContext } from 'react';
 
 const Card = (props) => {
+
+
+
     return (
         <div className="card" style={{ "width": "18rem" }}>
             <img src={props.src} className="card-img-top" alt={props.alt} />
@@ -14,7 +20,7 @@ const Card = (props) => {
             </ul>
             <div className="card-body d-flex justify-content-between">
                 <a href="#" className="card-link">More Info</a>
-                <a href="#" className="card-link">LIKE</a>
+                <a href="#" className="card-link"><FontAwesomeIcon icon={faHeart} /></a>
             </div>
         </div>
        )

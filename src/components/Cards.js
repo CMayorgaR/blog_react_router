@@ -11,6 +11,7 @@ const Cards = () => {
       .then((res) => res.json())
       .then((data) => setPersonaje(data.results));
   }, []);
+  
   return (
     <>
       <h1 className="text-primary">Personajes</h1>
