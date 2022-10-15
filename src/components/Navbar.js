@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import { Context } from '../store/appContext';
+import { useContext } from 'react';
 
 const Navbar = () => {
+
+const {store} = useContext(Context);
+
+const favList = store.favorite;
+console.log(favList)
+
   return (
     <nav className="container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -44,12 +52,14 @@ const Navbar = () => {
                 <ul
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
-                >
+                >{favList.map((item)=> {
+                  return (
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
+                    <a className="dropdown-item" key={item.id}>
+                      {item.name}
                     </a>
-                  </li>
+                  </li>)
+                } )} 
                 </ul>
               </li>
             </div>

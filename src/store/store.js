@@ -6,9 +6,9 @@ const getState = ({ setStore, getActions, getStore }) => {
       favorite: [],
     },
     actions: {
-      addFavorite: (favorite) => {
+      addFav: (name) => {
         const store = getStore();
-        const favorite = store.favorite.push();
+        const favorite = store.favorite.push(name);
         setStore({ favorite: [...store.favorite, favorite] });
       },
       //   deleteFavorite: (newFavorites) => {
