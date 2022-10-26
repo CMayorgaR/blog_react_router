@@ -7,6 +7,7 @@ const Navbar = () => {
 const {store} = useContext(Context);
 
 const favList = store.favorite;
+
 console.log(favList)
 
   return (
@@ -14,7 +15,7 @@ console.log(favList)
       <div className="container-fluid">
       <span>
           <Link to="/home" className="navbar-brand"> <img
-            src="https://nerdmacia.cl/wp-content/uploads/2017/06/Rick_and_Morty_Logo_and_Image.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
             alt=""
             style={{ width: "400px", height: "150px" }}
           />
@@ -52,11 +53,13 @@ console.log(favList)
                 <ul
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
-                >{favList.map((item)=> {
+                >{favList.map((index)=> {
                   return (
                   <li>
-                    <a className="dropdown-item" key={item.id}>
-                      {item.name}
+                    <a href= "#"
+                    className="dropdown-item fst-normal text-primary" 
+                    key={index.id}>
+                    {index.name}
                     </a>
                   </li>)
                 } )} 
